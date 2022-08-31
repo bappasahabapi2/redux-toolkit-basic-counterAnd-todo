@@ -5,7 +5,6 @@ import { fetchPosts } from './postSlice';
 const Posts = () => {
     // const post1 =useSelector((state)=>console.log(state.post))
     const {isLoading,posts,error} =useSelector((state)=>state.post);
-    // console.log(state.post);
     const dispatch = useDispatch();
 
     useEffect(() => {
