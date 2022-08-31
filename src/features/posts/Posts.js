@@ -13,20 +13,24 @@ const Posts = () => {
     
 
 return (
-    <div>
-    <h1>Posts...</h1>
+    <div  className="w-screen h-1/2 p-10 bg-purple-100 text-slate-700">
+            <h1 className="max-w-md mx-auto text-center text-2xl font-bold">
+                 List of posts
+            </h1>
+            <div className="max-w-md mx-auto mt-10 space-y-5">
 
-    {isLoading && <h4> Loading...</h4>}
-    {error && <h4>{error}</h4>} 
-     <section>
-     {posts  && posts.map((post)=>{
-       return<article>
-       <h1 style={{fontWeight:"bold"}}>{post.title}</h1>
-        <p>{post.body}</p>
-     </article>
-    })}
-     </section>
+                {isLoading && <h4> Loading...</h4>}
+                {error && <h4>{error}</h4>} 
+                <section>
+                {posts  && posts.map((post)=>{
+                  return<article>
+                  <h1 style={{fontWeight:"bold"}}>{post.title}</h1>
+                    <small>{post.body}</small>
+                </article>
+                })}
+                </section>
 
+            </div>
     </div>
   );
 };

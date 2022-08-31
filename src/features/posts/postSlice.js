@@ -10,7 +10,7 @@ const initialState={
 export const fetchPosts=createAsyncThunk("posts/fetchPosts", async()=>{
 
     // const url = "https://jsonplaceholder.typicode.com/posts";
-    const url = "https://jsonplaceholder.typicode.com/posts?_limit=8";
+    const url = "https://jsonplaceholder.typicode.com/posts?_limit=4";
     
     const response =await axios.get(url);
     return response.data;
