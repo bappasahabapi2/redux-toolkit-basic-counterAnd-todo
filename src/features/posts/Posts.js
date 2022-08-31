@@ -3,8 +3,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchPosts } from './postSlice';
 
 const Posts = () => {
-    // const post =useSelector((state)=>console.log(state))
+    // const post1 =useSelector((state)=>console.log(state.post))
     const {isLoading,posts,error} =useSelector((state)=>state.post);
+    // console.log(state.post);
     const dispatch = useDispatch();
 
     useEffect(() => {
